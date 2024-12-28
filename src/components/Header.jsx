@@ -55,7 +55,7 @@ export default function() {
   return (
     <header className={classes.header}>
       <Container size="md" className={classes.inner}>
-        <NavLink className={`${classes.link} ${classes.logo}`} to="/"><h1>LetGo</h1></NavLink>
+        <NavLink className={`${classes.link} ${classes.logo}`} to="/"><h1>EskiYeni</h1></NavLink>
         <Group gap={5}>
           {items}
         </Group>
