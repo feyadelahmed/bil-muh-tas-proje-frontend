@@ -1,0 +1,22 @@
+.cont {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.yorumler {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formTitle {
+  text-align: center;
+}

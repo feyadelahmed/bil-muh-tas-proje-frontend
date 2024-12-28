@@ -1,0 +1,25 @@
+.formCont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formTitle {
+  text-align: center;
+}
+
+.avatar {
+  cursor: pointer;
+}
+
+.resimInput {
+  display: none;
+}

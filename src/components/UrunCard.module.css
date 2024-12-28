@@ -1,0 +1,41 @@
+.card {
+  position: relative;
+  background-color: var(--mantine-color-body);
+  width: 250px;
+}
+
+.rating {
+  position: absolute;
+  top: var(--mantine-spacing-xs);
+  right: 12px;
+  pointer-events: none;
+}
+
+.ad {
+  display: block;
+  padding: 8px 0px;
+  text-decoration: none;
+  font-size: var(--mantine-font-size-lg);
+  font-weight: bold;
+  margin: 0;
+  color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
+}
+
+.kullaniciadi {
+  display: block;
+  line-height: 1;
+  padding: 8px 0px;
+  border-radius: var(--mantine-radius-sm);
+  text-decoration: none;
+  font-size: var(--mantine-font-size-sm);
+  color: var(--mantine-color-blue-filled);
+  font-weight: 500;
+}
+
+.action {
+  background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-5));
+}
+
+.footer {
+  margin-top: var(--mantine-spacing-md);
+}
