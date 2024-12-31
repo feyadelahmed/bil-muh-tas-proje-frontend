@@ -111,7 +111,7 @@ export default function({urun, yorum, onYorum}) {
           <div className={classes.btn}>
             {
               ctx.kullaniciadi === urun.kullanici.kullaniciadi &&
-              <Button label="Sil" disabled={beklemekte} onClick={() => silCevap(cevap.id)} danger/>
+              <Button label="Sil" disabled={beklemekte} onClick={() => cevapSil(cevap.id)} danger/>
             }
           </div>
         </Group>
