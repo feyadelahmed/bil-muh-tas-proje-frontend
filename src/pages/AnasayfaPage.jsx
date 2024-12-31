@@ -43,7 +43,7 @@ export default function() {
       if (response.error) {
         setError(response.errorMsg);
       } else {
-        const urunler = response.urunler.filter(u => !u.odeme);
+        const urunler = response.urunler.filter(u => !u.odeme || !u.odeme.durum);
         
         setUrunler(urunler);
         setTumUrunler(urunler);
