@@ -219,3 +219,28 @@ export async function odemeUrlGetir(token, urun) {
     return error;
   }
 }
+
+
+export async function faturaGetir(token, odemeId) {
+  try {
+    const response = await axios.get(`${url}/odeme/fatura/${odemeId}`,{
+      headers: {
+        token,
+      }
+    });
+    return response.data;
+  } catch (error) {
+    console.log(error);
+    return error;
+  }
+}
+
+export async function tumUrunleriGetir() {
+  try {
+    const response = await axios.get(`${url}/urun`);
+    return response.data;
+  } catch (error) {
+    console.log(error);
+    return error;
+  }
+}

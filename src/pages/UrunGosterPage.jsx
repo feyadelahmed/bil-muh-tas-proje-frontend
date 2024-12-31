@@ -25,9 +25,12 @@ export default function() {
   }
 
   function buyItem() {
+    console.dir(urun);
+    
     const item = {
       id: urun.id,
       ad: urun.ad,
+      kullaniciAdi: urun.kullanici.kullaniciadi,
       fiyat: urun.fiyat,
       resim: urun.resim,
     };
@@ -70,7 +73,7 @@ export default function() {
               size="sm"
             >
               <List.Item><b>{urun.gorunum}</b> kez görüntülendi</List.Item>
-              <List.Item> sahibi: <Link className={classes.kullaniciadi} to={`/profil/@/${urun.kullanici.kullaniciadi}`} ><b>@{urun.kullanici.kullaniciadi}</b></Link></List.Item>
+              <List.Item> sahibi: <Link className={classes.kullaniciadi} to={`/profil/@/${urun.kullanici.kullaniciadi}`} ><b>@{urun.kullanici.kullaniciadi}</b></Link> {`(${urun.kullanici.ad} ${urun.kullanici.soyad})`}</List.Item>
               <List.Item> yer: <b>{urun.ilce}, {urun.il}</b> </List.Item>
               <List.Item> Kategori: <b>{urun.kategori}</b> </List.Item>
               <List.Item> Marka: <b>{urun.marka}</b> </List.Item>

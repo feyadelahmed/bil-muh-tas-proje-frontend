@@ -58,7 +58,7 @@ export default function({urun, yorum, onYorum}) {
             {yorum.kullanici.ad} {yorum.kullanici.soyad}
           </Text>
 
-          <Text fz="xs" tt="uppercase" fw={700} c="dimmed">
+          <Text fz="xs" fw={700} c="dimmed">
             {yorum.metin}
           </Text>
         </div>
@@ -104,7 +104,7 @@ export default function({urun, yorum, onYorum}) {
               {urun.kullanici.ad} {urun.kullanici.soyad}
             </Text>
 
-            <Text fz="xs" tt="uppercase" fw={700} c="dimmed">
+            <Text fz="xs" fw={700} c="dimmed">
               {yorum.cevap.metin}
             </Text>
           </div>

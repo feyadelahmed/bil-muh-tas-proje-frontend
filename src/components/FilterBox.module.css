@@ -1,0 +1,22 @@
+.filterBox {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--mantine-color-blue-filled);
+  padding: 5px;
+}
+
+.list {
+  max-height: 200px;
+  overflow-y: scroll;
+}
+
+.label {
+  font-size: 1.3rem;
+}
+
+.itemCont {
+  display: flex;
+  gap: 5px;
+  font-size: 1.2rem;
+}

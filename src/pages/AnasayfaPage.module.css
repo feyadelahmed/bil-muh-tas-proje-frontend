@@ -1,0 +1,36 @@
+.main {
+  display: flex;
+}
+
+.filterCont {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-right: 10px;
+  border-right: 2px solid var(--mantine-color-blue-filled);
+}
+
+.page {
+  flex: 1;
+  padding: 20px;
+}
+
+.filterLabel {
+  font-size: 1.7rem;
+}
+
+.arama {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--mantine-color-blue-filled);
+}
+
+.cardCont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}

@@ -12,6 +12,7 @@ import OdemePage from './pages/OdemePage';
 import UrunEklePage from './pages/UrunEklePage';
 import UrunGosterPage from './pages/UrunGosterPage';
 import UrunGuncellePage from './pages/UrunGuncellePage';
+import OdemeBasariliPage from './pages/OdemeBasariliPage';
 
 
 function AuthenticatedRoutes() {
@@ -46,6 +47,7 @@ function App() {
             <Route path='/ekle' element={<UrunEklePage />} />
             <Route path='/urun/:urunId/guncelle' element={<UrunGuncellePage />} />
             <Route path='/odeme' element={<OdemePage />} />
+            <Route path='/odeme/success/:odemeId' element={<OdemeBasariliPage />} />
           </Route>
 
           <Route element={<UnauthenticatedRoutes />}>

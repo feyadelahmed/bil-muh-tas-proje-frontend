@@ -4,7 +4,7 @@ export const ReactContext = createContext();
 
 export default function ReactContextProvider({ children }) {
   const [token, setToken] = useState(localStorage.getItem('token'));
-  const [itemToBuy, setItemToBuy] = useState({});
+  const [itemToBuy, setItemToBuy] = useState({id: 23});
   const [kullaniciadi, setKullaniciadi] = useState(localStorage.getItem('kullaniciadi'));
 
   function saveToken(token, kullaniciadi) {

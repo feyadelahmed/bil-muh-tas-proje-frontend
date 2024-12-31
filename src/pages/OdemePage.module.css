@@ -1,0 +1,24 @@
+.formCont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.form {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formTitle {
+  text-align: center;
+}
+
+.name {
+  font-family:
+    Greycliff CF,
+    var(--mantine-font-family);
+}
