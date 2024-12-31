@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import { ReactContext } from '../context/reactContext';
-import { useNavigate, useParams } from 'react-router';
+import { useNavigate, useParams, Link } from 'react-router';
 import Alert from '../components/Alert';
 import classes from './UrunGosterPage.module.css';
 import ButtonComp from '../components/Button';
@@ -22,6 +22,17 @@ export default function() {
 
   function onYorum() {
     setRandom(Math.random());
+  }
+
+  function buyItem() {
+    const item = {
+      id: urun.id,
+      ad: urun.ad,
+      fiyat: urun.fiyat,
+      resim: urun.resim,
+    };
+    ctx.setItemToBuyInfo(item);
+    navigate(`/odeme`);
   }
 
   useEffect(() => {
@@ -59,6 +70,7 @@ export default function() {
               size="sm"
             >
               <List.Item><b>{urun.gorunum}</b> kez görüntülendi</List.Item>
+              <List.Item> sahibi: <Link className={classes.kullaniciadi} to={`/profil/@/${urun.kullanici.kullaniciadi}`} ><b>@{urun.kullanici.kullaniciadi}</b></Link></List.Item>
               <List.Item> yer: <b>{urun.ilce}, {urun.il}</b> </List.Item>
               <List.Item> Kategori: <b>{urun.kategori}</b> </List.Item>
               <List.Item> Marka: <b>{urun.marka}</b> </List.Item>
@@ -77,7 +89,7 @@ export default function() {
                 ? <Button radius="xl" size="md" className={classes.control} onClick={() => navigate(`/urun/${urun.id}/guncelle`)}>
                     Güncelle
                   </Button>
-                : <Button radius="xl" size="md" className={classes.control}>
+                : <Button radius="xl" size="md" className={classes.control} onClick={buyItem}>
                     Satın Al
                   </Button>
               }

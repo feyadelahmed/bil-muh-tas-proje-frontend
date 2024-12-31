@@ -50,9 +50,11 @@ export default function({urun}) {
         </Center>
       </Group>
 
-      <Group justify="space-between" className={classes.footer}>
+      {
+      loggedInUser && <Group justify="space-between" className={classes.footer}>
         <Button label="Güncelle" onClick={() => navigate(`/urun/${urun.id}/guncelle`)}/>
       </Group>
+      }
     </Card>
   );
 }

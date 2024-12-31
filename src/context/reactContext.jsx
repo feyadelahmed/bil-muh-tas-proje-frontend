@@ -4,6 +4,7 @@ export const ReactContext = createContext();
 
 export default function ReactContextProvider({ children }) {
   const [token, setToken] = useState(localStorage.getItem('token'));
+  const [itemToBuy, setItemToBuy] = useState({});
   const [kullaniciadi, setKullaniciadi] = useState(localStorage.getItem('kullaniciadi'));
 
   function saveToken(token, kullaniciadi) {
@@ -27,12 +28,18 @@ export default function ReactContextProvider({ children }) {
     setKullaniciadi(null);
   }
 
+  function setItemToBuyInfo(item) {
+    setItemToBuy(item);
+  }
+
   const value = {
     token,
     kullaniciadi,
+    itemToBuy,
     saveToken,
     loadToken,
     cikis,
+    setItemToBuyInfo,
     ...api,
   }
   

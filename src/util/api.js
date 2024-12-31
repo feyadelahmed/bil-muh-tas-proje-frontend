@@ -1,6 +1,6 @@
 import axios from 'axios';
-// const url = "http://localhost:3000";
-const url = "https://uniproje.vercel.app";
+const url = "http://localhost:3000";
+// const url = "https://uniproje.vercel.app";
 
 export async function kayit(ad, soyad, kullaniciadi, sifre) {
   try {
@@ -193,6 +193,22 @@ export async function cevapYaz(token, metin, yorumId) {
 export async function cevapSil(token, id) {
   try {
     const response = await axios.delete(`${url}/yorum/cevap/${id}`, {
+      headers: {
+        token,
+      }
+    });
+    return response.data;
+  } catch (error) {
+    console.log(error);
+    return error;
+  }
+}
+
+export async function odemeUrlGetir(token, urun) {
+  try {
+    const response = await axios.post(`${url}/odeme/session`, {
+      urun,
+    }, {
       headers: {
         token,
       }

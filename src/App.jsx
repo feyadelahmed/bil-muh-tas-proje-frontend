@@ -8,6 +8,7 @@ import KayitPage from './pages/KayitPage';
 import GirisPage from './pages/GirisPage';
 import AnasayfaPage from './pages/AnasayfaPage';
 import ProfilPage from './pages/ProfilPage';
+import OdemePage from './pages/OdemePage';
 import UrunEklePage from './pages/UrunEklePage';
 import UrunGosterPage from './pages/UrunGosterPage';
 import UrunGuncellePage from './pages/UrunGuncellePage';
@@ -44,6 +45,7 @@ function App() {
             <Route path='/profil/@/:kullaniciadi' element={<ProfilPage />} />
             <Route path='/ekle' element={<UrunEklePage />} />
             <Route path='/urun/:urunId/guncelle' element={<UrunGuncellePage />} />
+            <Route path='/odeme' element={<OdemePage />} />
           </Route>
 
           <Route element={<UnauthenticatedRoutes />}>
